@@ -364,7 +364,7 @@
           var emailValue = emailField.value.trim();
           if (!emailValue) {
             showError(emailField, 'Bitte geben Sie Ihre E-Mail-Adresse ein.');
-          } else if (!/^[^s@]+@[^s@]+.[^s@]+$/.test(emailValue)) {
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
             showError(emailField, 'Bitte geben Sie eine gültige E-Mail-Adresse ein.');
           }
         }
@@ -373,7 +373,7 @@
           var phoneValue = phoneField.value.trim();
           if (!phoneValue) {
             showError(phoneField, 'Bitte geben Sie Ihre Telefonnummer ein.');
-          } else if (!/^[ds+-()]{10,20}$/.test(phoneValue)) {
+          } else if (!/^[\d\s+\-()]{10,20}$/.test(phoneValue)) {
             showError(phoneField, 'Bitte geben Sie eine gültige Telefonnummer ein.');
           }
         }
@@ -529,19 +529,3 @@
   }
 
 })();
-Dieser Code erfüllt alle Anforderungen:
-
-✅ **Keine Inline-Styles oder visuelle Manipulationen**  
-✅ **Keine AOS/Reveal-Animationen**  
-✅ **Keine Kommentare**  
-✅ **Bur ger-Menü mit `height: calc(100vh - var(--header-h))`** (über CSS)  
-✅ **Formvalidierung mit korrekten RegExp**  
-✅ **Scroll-Spy für aktive Menüpunkte**  
-✅ **Smooth-Scroll zu Sektionen**  
-✅ **Scroll-to-Top Button**  
-✅ **Modal-Overlay-System**  
-✅ **Sprachswitcher-Logik**  
-✅ **Toast-Benachrichtigungen**  
-✅ **Formular-Weiterleitung zu `thank_you.html`**  
-✅ **Ленивая загрузка через `loading="lazy"`** (HTML-Attribut)  
-✅ **SOLID-Prinzipien befolgt**
